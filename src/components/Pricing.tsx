@@ -78,11 +78,11 @@ export const Pricing = () => {
       features: [
         { text: "3-page website", included: true },
         { text: "Mobile-friendly design", included: true },
-        { text: "SEO optimization", included: true },
+        { text: "Fast loading speed", included: true },
         { text: "Contact form", included: true },
         { text: "Google Maps integration", included: false },
         { text: "Booking system", included: false },
-        { text: "E-commerce functionality", included: false },
+        { text: "Custom animations", included: false },
       ],
       isPopular: false,
       delay: "0s"
@@ -94,11 +94,11 @@ export const Pricing = () => {
       features: [
         { text: "5-page website", included: true },
         { text: "Mobile-friendly design", included: true },
-        { text: "SEO optimization", included: true },
+        { text: "Fast loading speed", included: true },
         { text: "Contact form", included: true },
         { text: "Google Maps integration", included: true },
         { text: "Social media integration", included: true },
-        { text: "E-commerce functionality", included: false },
+        { text: "Custom animations", included: false },
       ],
       isPopular: true,
       delay: "0.1s"
@@ -110,11 +110,11 @@ export const Pricing = () => {
       features: [
         { text: "7+ page website", included: true },
         { text: "Mobile-friendly design", included: true },
-        { text: "Advanced SEO optimization", included: true },
+        { text: "Fast loading speed", included: true },
         { text: "Contact form", included: true },
         { text: "Google Maps integration", included: true },
         { text: "Booking/reservation system", included: true },
-        { text: "E-commerce functionality", included: true },
+        { text: "Custom animations", included: true },
       ],
       isPopular: false,
       delay: "0.2s"
@@ -132,7 +132,7 @@ export const Pricing = () => {
             Transparent, Affordable Pricing
           </h2>
           <p className="text-foreground/70">
-            Choose the plan that fits your business needs. All plans include free hosting setup and basic SEO optimization.
+            Choose the plan that fits your business needs. All plans include free hosting setup and basic site maintenance.
           </p>
         </div>
         
