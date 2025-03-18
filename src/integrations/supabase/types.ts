@@ -92,6 +92,39 @@ export type Database = {
           },
         ]
       }
+      contact_submissions: {
+        Row: {
+          budget_range: string
+          business_type: string
+          created_at: string
+          email: string
+          id: string
+          message: string | null
+          name: string
+          status: string
+        }
+        Insert: {
+          budget_range: string
+          business_type: string
+          created_at?: string
+          email: string
+          id?: string
+          message?: string | null
+          name: string
+          status?: string
+        }
+        Update: {
+          budget_range?: string
+          business_type?: string
+          created_at?: string
+          email?: string
+          id?: string
+          message?: string | null
+          name?: string
+          status?: string
+        }
+        Relationships: []
+      }
       decks: {
         Row: {
           category: string | null

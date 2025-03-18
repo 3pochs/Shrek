@@ -1,8 +1,11 @@
 
 import React, { useState } from 'react';
 import { Send, Check } from 'lucide-react';
+import { supabase } from "@/integrations/supabase/client";
+import { useToast } from "@/hooks/use-toast";
 
 export const ContactForm = () => {
+  const { toast } = useToast();
   const [formState, setFormState] = useState({
     name: '',
     email: '',
@@ -19,14 +22,42 @@ export const ContactForm = () => {
     setFormState(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      // Step 1: Save the submission to Supabase
+      const { error: insertError } = await supabase
+        .from('contact_submissions')
+        .insert({
+          name: formState.name,
+          email: formState.email,
+          business_type: formState.business,
+          budget_range: formState.budget,
+          message: formState.message
+        });
+        
+      if (insertError) {
+        throw new Error(`Failed to save contact form: ${insertError.message}`);
+      }
+      
+      // Step 2: Send the notification email via Edge Function
+      const { error: emailError } = await supabase.functions.invoke('send-contact-email', {
+        body: formState
+      });
+      
+      if (emailError) {
+        console.error("Email notification error:", emailError);
+        // We'll continue even if email fails as the data is saved to DB
+      }
+      
+      // Success!
       setIsSubmitted(true);
+      toast({
+        title: "Message Sent!",
+        description: "We'll get back to you within 24 hours.",
+      });
       
       // Reset form after showing success message
       setTimeout(() => {
@@ -39,7 +70,16 @@ export const ContactForm = () => {
           message: ''
         });
       }, 5000);
-    }, 1500);
+    } catch (error) {
+      console.error("Form submission error:", error);
+      toast({
+        title: "Something went wrong",
+        description: error.message || "Failed to submit your message. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
