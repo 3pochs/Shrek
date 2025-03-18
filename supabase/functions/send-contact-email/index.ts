@@ -23,24 +23,18 @@ const handler = async (req: Request) => {
   try {
     const formData: ContactFormData = await req.json();
     
-    // Forward the contact form submission via email
-    // In a real implementation, you would use an email service like Resend, SendGrid, etc.
+    // Get the Resend API key from environment variables
+    const resendApiKey = Deno.env.get("RESEND_API_KEY");
     
-    // For now, let's log the data that would be sent via email
-    console.log("Contact form submission received:");
-    console.log(`From: ${formData.name} (${formData.email})`);
-    console.log(`Business Type: ${formData.business}`);
-    console.log(`Budget Range: ${formData.budget}`);
-    console.log(`Message: ${formData.message}`);
-    console.log(`To be sent to: support@companycove.com`);
+    if (!resendApiKey) {
+      throw new Error("RESEND_API_KEY is not configured");
+    }
     
-    // In a production environment, you would add code here to send the actual email
-    // For example, using a service like Resend:
-    /*
+    // Send the email using Resend API
     const emailResponse = await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: {
-        "Authorization": `Bearer ${Deno.env.get("RESEND_API_KEY")}`,
+        "Authorization": `Bearer ${resendApiKey}`,
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
@@ -57,10 +51,20 @@ const handler = async (req: Request) => {
         `
       })
     });
-    */
+    
+    const emailResult = await emailResponse.json();
+    console.log("Email sending result:", emailResult);
+    
+    if (!emailResponse.ok) {
+      throw new Error(`Failed to send email: ${JSON.stringify(emailResult)}`);
+    }
 
     return new Response(
-      JSON.stringify({ success: true, message: "Form submission received" }),
+      JSON.stringify({ 
+        success: true, 
+        message: "Form submission received and email sent",
+        emailResult 
+      }),
       {
         status: 200,
         headers: { ...corsHeaders, "Content-Type": "application/json" },

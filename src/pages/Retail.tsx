@@ -1,6 +1,6 @@
-
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Layout } from '../components/Layout';
+import { Check } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { ShoppingCart, Heart, ArrowRight, Star, X, Plus, Minus, Mail, MapPin, Phone, Clock } from 'lucide-react';
 
@@ -90,7 +90,6 @@ const Retail = () => {
       setCartItems([...cartItems, { ...product, quantity: 1 }]);
     }
     
-    // Open cart when adding items
     setIsCartOpen(true);
   };
   
@@ -125,7 +124,6 @@ const Retail = () => {
   };
   
   useEffect(() => {
-    // Close cart when clicking outside
     const handleClickOutside = (event: MouseEvent) => {
       const cart = document.getElementById('shopping-cart');
       if (cart && !cart.contains(event.target as Node) && isCartOpen) {
