@@ -1,5 +1,6 @@
+
 import React, { useState } from 'react';
-import { Layout } from '../components/Layout';
+import { Layout } from '@/components/Layout';
 import { Link } from 'react-router-dom';
 import { Calendar, Clock, MapPin, ChevronDown, Phone, Mail } from 'lucide-react';
 
