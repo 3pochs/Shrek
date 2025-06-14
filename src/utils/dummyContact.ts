@@ -1,6 +1,8 @@
 import { supabase } from "@/integrations/supabase/client";
 
 export const runTellAJokeOnVisit = async () => {
+  console.log("runTellAJokeOnVisit function was called!"); // <-- added log here
+
   try {
     const { error } = await supabase.functions.invoke('tell-a-joke', {
       body: {}
