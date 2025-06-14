@@ -1,0 +1,43 @@
+# Common variations
+/web-design /retail
+/website-design /retail
+/business-website /retail
+/small-business-website /retail
+/affordable-website /retail
+/custom-website /retail
+/website-builder /retail
+/website-development /retail
+/web-development /retail
+
+# Service-specific redirects
+/restaurant-website /restaurant
+/restaurant-websites /restaurant
+/restaurant-web-design /restaurant
+/barber-website /barbershop
+/barber-websites /barbershop
+/barbershop-websites /barbershop
+/barber-web-design /barbershop
+
+# Contact variations
+/get-started /questionnaire
+/start-project /questionnaire
+/request-quote /questionnaire
+/quote /questionnaire
+/pricing /retail
+
+# FAQ variations
+/help /faq
+/support /faq
+/faqs /faq
+/questions /faq
+
+# About variations
+/company /about
+/team /about
+/our-story /about
+/why-choose-us /about
+
+# Legacy redirects (if you had old URLs)
+/old-contact /contact
+/old-about /about
+/old-faq /faq 

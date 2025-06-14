@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 
@@ -52,7 +51,7 @@ export const FAQAccordion: React.FC = () => {
     },
     {
       question: "How long does it take to build a website?",
-      answer: "We pride ourselves on fast turnaround times. Most projects are completed within 48 hours from the moment we receive all necessary content (text, images, logos, etc.). More complex websites with e-commerce functionality may take 3-5 business days."
+      answer: "We pride ourselves on fast turnaround times. Most projects are completed within 3-5 business days from the moment we receive all necessary content (text, images, logos, etc.). More complex websites with e-commerce functionality may take 5-7 business days."
     },
     {
       question: "Do I need to provide content for my website?",
@@ -64,11 +63,11 @@ export const FAQAccordion: React.FC = () => {
     },
     {
       question: "What about hosting and domain names?",
-      answer: "We help set up hosting on reliable platforms like Netlify or Vercel, which offer free tiers sufficient for most small business websites. If you don't have a domain name yet, we can assist with purchasing one (typically $10-15/year, depending on the domain extension)."
+      answer: "We help set up hosting on reliable platforms like Netlify or Vercel, which offer free tiers sufficient for most business websites. If you don't have a domain name yet, we can assist with purchasing one (typically $10-15/year, depending on the domain extension)."
     },
     {
       question: "Do you offer maintenance services?",
-      answer: "Yes! We offer affordable maintenance plans starting at $20/month, which include regular updates, security monitoring, and minor content changes. For more extensive changes, we provide hourly rates or bundled packages."
+      answer: "Yes! We offer maintenance plans starting at $20/month, which include regular updates, security monitoring, and minor content changes. For more extensive changes, we provide hourly rates or bundled packages."
     },
     {
       question: "Will my website work on mobile devices?",

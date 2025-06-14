@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Layout } from '../components/Layout';
 import { Link } from 'react-router-dom';
@@ -38,10 +37,10 @@ const Restaurant = () => {
   };
 
   const gallery = [
-    'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80',
-    'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80',
-    'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80',
-    'https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80'
+    'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80'
   ];
 
   const [activeMenuCategory, setActiveMenuCategory] = useState('starters');
@@ -293,6 +292,8 @@ const Restaurant = () => {
                 <img 
                   src={image} 
                   alt={`Gallery image ${index + 1}`} 
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-64 object-cover"
                 />
               </div>
@@ -429,7 +430,7 @@ const Restaurant = () => {
               </button>
               
               <p className="text-sm text-foreground/70 text-center">
-                For large parties (9+ people) or special events, please call us directly at (123) 456-7890.
+                For large parties (9+ people) or special events, please call us directly at (872) 256-1290.
               </p>
             </form>
           </div>
@@ -468,8 +469,8 @@ const Restaurant = () => {
                   </div>
                   <div>
                     <h3 className="font-medium mb-1">Phone</h3>
-                    <a href="tel:+11234567890" className="text-foreground/70 hover:text-primary transition-colors">
-                      (123) 456-7890
+                    <a href="tel:+18722561290" className="text-foreground/70 hover:text-primary transition-colors">
+                      (872) 256-1290
                     </a>
                   </div>
                 </div>
@@ -537,7 +538,7 @@ const Restaurant = () => {
               Want a beautiful restaurant website like this?
             </h2>
             <p className="text-foreground/80 mb-8">
-              We can build a custom website for your restaurant in just 48 hours, starting at only $300. No technical knowledge required!
+              We can build a custom website for your restaurant starting at only $300. No technical knowledge required!
             </p>
             <Link 
               to="/contact" 

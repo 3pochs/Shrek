@@ -1,0 +1,159 @@
+[[redirects]]
+  from = "/web-design"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/website-design"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/business-website"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/small-business-website"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/affordable-website"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/custom-website"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/website-builder"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/website-development"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/web-development"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/restaurant-website"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/restaurant-websites"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/restaurant-web-design"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/barber-website"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/barber-websites"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/barbershop-websites"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/barber-web-design"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/get-started"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/start-project"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/request-quote"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/quote"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/pricing"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/help"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/support"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/faqs"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/questions"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/company"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/team"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/our-story"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/why-choose-us"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/old-contact"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/old-about"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/old-faq"
+  to = "/"
+  status = 301 

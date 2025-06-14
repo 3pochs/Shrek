@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -18,6 +17,8 @@ const DemoCard: React.FC<DemoCardProps> = ({ title, description, imageSrc, path,
         <img 
           src={imageSrc} 
           alt={title} 
+          loading="lazy"
+          decoding="async"
           className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
         />
         <div className="absolute top-4 left-4 flex flex-wrap gap-2">
@@ -48,23 +49,16 @@ export const DemoShowcase = () => {
     {
       title: "Restaurant",
       description: "Elegant website for restaurants and cafes with online reservations.",
-      imageSrc: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80",
+      imageSrc: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
       path: "/restaurant",
       tags: ["Menu", "Reservations", "Gallery"]
     },
     {
       title: "Barbershop",
       description: "Modern site for barbershops and salons with booking system.",
-      imageSrc: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80",
+      imageSrc: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
       path: "/barbershop",
       tags: ["Booking", "Gallery", "Dark Mode"]
-    },
-    {
-      title: "Retail Store",
-      description: "Clean e-commerce site for retail stores with product catalog.",
-      imageSrc: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80",
-      path: "/retail",
-      tags: ["E-commerce", "Products", "Checkout"]
     }
   ];
 
@@ -83,7 +77,7 @@ export const DemoShowcase = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {demos.map((demo, index) => (
             <DemoCard 
               key={index} 

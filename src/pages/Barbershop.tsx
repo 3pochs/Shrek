@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Layout } from '../components/Layout';
 import { Link } from 'react-router-dom';
@@ -38,10 +37,10 @@ const Barbershop = () => {
   ];
   
   const gallery = [
-    'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80',
-    'https://images.unsplash.com/photo-1599351431202-1e0f0137899a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80',
-    'https://images.unsplash.com/photo-1621605815971-fbc98d665033?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80',
-    'https://images.unsplash.com/photo-1634481570432-0be979ba6da3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80'
+    'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1599351431202-1e0f0137899a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1621605815971-fbc98d665033?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1634481570432-0be979ba6da3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80'
   ];
   
   const testimonials = [
@@ -320,17 +319,19 @@ const Barbershop = () => {
           
           <div className="grid md:grid-cols-3 gap-8 slide-up-animation" style={{ animationDelay: '0.1s' }}>
             {staff.map((barber, index) => (
-              <div key={index} className="text-center">
-                <div className="rounded-full overflow-hidden w-48 h-48 mx-auto mb-4">
-                  <img 
-                    src={barber.image} 
-                    alt={barber.name} 
-                    className="w-full h-full object-cover"
+              <div key={index} className="flex flex-col items-center text-center">
+                <div className="relative w-32 h-32 mb-4">
+                  <img
+                    src={barber.image}
+                    alt={barber.name}
+                    className="rounded-full object-cover w-full h-full"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
-                <h3 className="text-xl font-bold mb-1">{barber.name}</h3>
-                <p className="text-white/60 mb-2">{barber.title}</p>
-                <p className="text-white/80">{barber.bio}</p>
+                <h3 className="text-xl font-semibold mb-1">{barber.name}</h3>
+                <p className="text-gray-600 mb-2">{barber.title}</p>
+                <p className="text-gray-500">{barber.bio}</p>
                 <button 
                   onClick={() => {
                     setActiveTab('booking');
@@ -363,11 +364,13 @@ const Barbershop = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 slide-up-animation" style={{ animationDelay: '0.1s' }}>
             {gallery.map((image, index) => (
-              <div key={index} className="rounded-lg overflow-hidden hover-scale">
-                <img 
-                  src={image} 
-                  alt={`Gallery image ${index + 1}`} 
-                  className="w-full h-auto"
+              <div key={index} className="relative aspect-square overflow-hidden rounded-lg">
+                <img
+                  src={image}
+                  alt={`Gallery image ${index + 1}`}
+                  className="h-full w-full object-cover transition-transform duration-300 hover:scale-110"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             ))}
@@ -639,8 +642,8 @@ const Barbershop = () => {
                   </div>
                   <div>
                     <h3 className="font-medium mb-1">Phone</h3>
-                    <a href="tel:+11234567890" className="text-white/70 hover:text-white transition-colors">
-                      (123) 456-7890
+                    <a href="tel:+18722561290" className="text-white/70 hover:text-white transition-colors">
+                      (872) 256-1290
                     </a>
                   </div>
                 </div>
@@ -735,7 +738,7 @@ const Barbershop = () => {
               Want a sleek barbershop website like this?
             </h2>
             <p className="text-foreground/80 mb-8">
-              We can build a custom website for your barbershop or salon in just 48 hours, starting at only $300. No technical knowledge required!
+              We can build a custom website for your barbershop or salon starting at only $300. No technical knowledge required!
             </p>
             <Link 
               to="/contact" 

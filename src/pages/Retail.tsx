@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Layout } from '../components/Layout';
 import { Check } from 'lucide-react';
@@ -24,7 +23,7 @@ const Retail = () => {
       id: 1,
       name: 'Minimalist White T-Shirt',
       price: 29.99,
-      image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80',
+      image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80',
       category: ['featured', 'new'],
       rating: 4.5,
       reviews: 24
@@ -33,7 +32,7 @@ const Retail = () => {
       id: 2,
       name: 'Classic Denim Jacket',
       price: 89.99,
-      image: 'https://images.unsplash.com/photo-1611312449408-fcece27cdbb7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80',
+      image: 'https://images.unsplash.com/photo-1611312449408-fcece27cdbb7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80',
       category: ['featured'],
       rating: 5,
       reviews: 18
@@ -43,7 +42,7 @@ const Retail = () => {
       name: 'Vintage Wool Sweater',
       price: 59.99,
       originalPrice: 79.99,
-      image: 'https://images.unsplash.com/photo-1599576713929-d9be58126171?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80',
+      image: 'https://images.unsplash.com/photo-1599576713929-d9be58126171?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80',
       category: ['sale'],
       rating: 4,
       reviews: 32
@@ -52,7 +51,7 @@ const Retail = () => {
       id: 4,
       name: 'Modern Canvas Backpack',
       price: 49.99,
-      image: 'https://images.unsplash.com/photo-1577733975197-3b950ca5cabe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80',
+      image: 'https://images.unsplash.com/photo-1577733975197-3b950ca5cabe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80',
       category: ['new'],
       rating: 4.5,
       reviews: 12
@@ -62,7 +61,7 @@ const Retail = () => {
       name: 'Leather Crossbody Bag',
       price: 69.99,
       originalPrice: 99.99,
-      image: 'https://images.unsplash.com/photo-1590874103328-eac38a683ce7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80',
+      image: 'https://images.unsplash.com/photo-1590874103328-eac38a683ce7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80',
       category: ['featured', 'sale'],
       rating: 5,
       reviews: 8
@@ -71,7 +70,7 @@ const Retail = () => {
       id: 6,
       name: 'Premium Watch Collection',
       price: 149.99,
-      image: 'https://images.unsplash.com/photo-1523170335258-f5ed11844a49?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80',
+      image: 'https://images.unsplash.com/photo-1523170335258-f5ed11844a49?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80',
       category: ['featured', 'new'],
       rating: 4.5,
       reviews: 16
@@ -166,8 +165,10 @@ const Retail = () => {
         
         <div className="absolute top-0 right-0 w-1/2 h-full -z-10 hidden md:block">
           <img 
-            src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80" 
+            src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" 
             alt="Fashion Collection" 
+            loading="lazy"
+            decoding="async"
             className="w-full h-full object-cover"
           />
         </div>
@@ -188,8 +189,10 @@ const Retail = () => {
           <div className="grid md:grid-cols-3 gap-6 slide-up-animation" style={{ animationDelay: '0.1s' }}>
             <div className="relative rounded-lg overflow-hidden h-60 group hover-scale">
               <img 
-                src="https://images.unsplash.com/photo-1603252109303-2751441dd157?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80" 
+                src="https://images.unsplash.com/photo-1603252109303-2751441dd157?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" 
                 alt="Men's Collection" 
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
@@ -204,8 +207,10 @@ const Retail = () => {
             
             <div className="relative rounded-lg overflow-hidden h-60 group hover-scale">
               <img 
-                src="https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80" 
+                src="https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" 
                 alt="Women's Collection" 
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
@@ -220,8 +225,10 @@ const Retail = () => {
             
             <div className="relative rounded-lg overflow-hidden h-60 group hover-scale">
               <img 
-                src="https://images.unsplash.com/photo-1576871337622-98d48d1cf531?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80" 
+                src="https://images.unsplash.com/photo-1576871337622-98d48d1cf531?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" 
                 alt="Accessories" 
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
@@ -272,6 +279,8 @@ const Retail = () => {
                   <img 
                     src={product.image} 
                     alt={product.name} 
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                   />
                   {product.originalPrice && (
@@ -445,8 +454,8 @@ const Retail = () => {
                 <Phone size={20} className="text-primary" />
               </div>
               <h3 className="font-bold mb-2">Call Us</h3>
-              <a href="tel:+11234567890" className="text-foreground/70 hover:text-primary transition-colors">
-                (123) 456-7890
+              <a href="tel:+18722561290" className="text-foreground/70 hover:text-primary transition-colors">
+                (872) 256-1290
               </a>
             </div>
           </div>
@@ -480,7 +489,7 @@ const Retail = () => {
               Want a beautiful e-commerce website like this?
             </h2>
             <p className="text-foreground/80 mb-8">
-              We can build a custom website for your retail business in just 48 hours, starting at only $300. No technical knowledge required!
+              We can build a custom website for your retail business starting at only $300. No technical knowledge required!
             </p>
             <Link 
               to="/contact" 

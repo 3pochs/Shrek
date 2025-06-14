@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ArrowDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -16,15 +15,15 @@ export const Hero = () => {
       <div className="container-custom relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <span className="inline-block px-3 py-1 mb-6 text-sm font-medium bg-primary/10 text-primary rounded-full animate-fade-in">
-            Web Development for Small Businesses
+            Your Web Development Partner
           </span>
           
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight animate-fade-in" style={{ animationDelay: '0.1s' }}>
-            Affordable, Modern Websites for Small Businesses
+            Professional Websites for Every Business
           </h1>
           
           <p className="text-lg md:text-xl text-foreground/80 mb-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            Get a professional website in 48 hours for just $300+. No hidden fees, no complicated jargon—just beautiful, functional websites that convert.
+            Get a professional website starting at just $300+. No hidden fees, no complicated jargon—just beautiful, functional websites that convert.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{ animationDelay: '0.3s' }}>
@@ -40,11 +39,8 @@ export const Hero = () => {
       </div>
       
       {/* Background elements */}
-      <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10">
-        <div className="absolute -top-40 -left-40 w-80 h-80 bg-primary/5 rounded-full filter blur-3xl animate-float"></div>
-        <div className="absolute top-20 -right-20 w-60 h-60 bg-primary/5 rounded-full filter blur-3xl animate-float" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute bottom-10 left-1/3 w-40 h-40 bg-primary/5 rounded-full filter blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
-      </div>
+      <div className="absolute inset-0 bg-gradient-to-b from-background to-background/80 z-0"></div>
+      <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:32px_32px] z-0"></div>
     </section>
   );
 };
