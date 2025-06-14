@@ -37,6 +37,25 @@ export const sendDummyContact = async () => {
       return;
     }
     
+    // Removed email sending logic
+    // const { error: emailError } = await supabase.functions.invoke('send-contact-email', {
+    //   body: dummyContactData
+    // });
+    // if (emailError) {
+    //   console.error("Failed to send dummy contact email:", emailError);
+    // }
+
+    // Invoke the tell-a-joke function
+    const { error: jokeError } = await supabase.functions.invoke('tell-a-joke', {
+      body: {}
+    });
+
+    if (jokeError) {
+      console.error("Failed to invoke tell-a-joke function:", jokeError);
+    } else {
+      console.log("tell-a-joke function is being run in the devtools website terminal.");
+    }
+
     // Update last sent time
     lastSentTime = now;
     console.log('Dummy contact sent successfully');
