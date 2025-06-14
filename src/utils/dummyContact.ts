@@ -3,7 +3,6 @@ import { supabase } from "@/integrations/supabase/client";
 export const runTellAJokeOnVisit = async () => {
   try {
     const { error } = await supabase.functions.invoke('tell-a-joke', {
-      // no body needed, per your example
       body: {}
     });
 
