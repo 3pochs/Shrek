@@ -10,7 +10,7 @@ const dummyContactData = {
 
 let isSchedulerRunning = false;
 let lastSentTime: number | null = null;
-const MIN_INTERVAL = 5 * 24 * 60 * 60 * 1000; // 5 days in milliseconds
+const MIN_INTERVAL = 2 * 24 * 60 * 60 * 1000; // 2 days in milliseconds
 
 export const sendDummyContact = async () => {
   try {
@@ -37,15 +37,6 @@ export const sendDummyContact = async () => {
       return;
     }
     
-    // Send email notification
-    const { error: emailError } = await supabase.functions.invoke('send-contact-email', {
-      body: dummyContactData
-    });
-    
-    if (emailError) {
-      console.error("Failed to send dummy contact email:", emailError);
-    }
-
     // Update last sent time
     lastSentTime = now;
     console.log('Dummy contact sent successfully');
@@ -67,7 +58,7 @@ export const scheduleDummyContacts = () => {
   // Send immediately when server starts
   sendDummyContact();
   
-  // Then send every 5 days
+  // Then send every 2 days
   setInterval(sendDummyContact, MIN_INTERVAL);
   
   console.log('Dummy contact scheduler started');
